@@ -105,18 +105,7 @@ body {
   transition: 250ms;
 }
 
-/* .menu::after{ 
-  content: '';
-  width: 100%;
-  height: 4px;
-  bottom: -1px;
 
-  display: block;
-  position: absolute;
-  
-border-radius: 2px;
-
-} */
 .current {
   color: #404bbf;
 }
@@ -165,7 +154,7 @@ border-radius: 2px;
   margin: 0 auto;
   padding-bottom: 188px;
   padding-top: 188px;
-  /* background-image: url(/images/hero-bg.jpg); */
+  
   background-image: linear-gradient(
       rgba(46, 47, 66, 0.7),
       rgba(46, 47, 66, 0.7)
@@ -514,10 +503,10 @@ border-radius: 2px;
 .footer-mail {
  
   width: 264px;
+  height: 40px;
    margin-right: 24px;
-  padding-top: 8px;
+ 
   padding-left: 16px;
-  padding-bottom: 8px;
 
   font-family: 'Roboto';
 font-style: normal;
@@ -537,8 +526,8 @@ border-radius: 4px;
 }
 .footer-button {
  
-  /* width: 163px;
-  height: 40px; */
+  
+  height: 40px; 
   background: #4D5AE5;
   border-radius: 4px;
   padding: 8px 14px 8px 24px;
@@ -549,8 +538,8 @@ border-radius: 4px;
   font-size: 16px;
   line-height: 24px;
   /* identical to box height, or 150% */
-/* display: inline-block; */
- 
+
+ display: inline-flex;
   align-items: center;
   text-align: center;
   letter-spacing: 0.04em;
@@ -644,7 +633,7 @@ border: none;
   text-align: center;
   letter-spacing: 0.02em;
   color: #2e2f42;
-  padding-bottom: 16px;
+  margin-bottom: 16px;
 }
 .input-wrap {
   position: relative;
@@ -652,6 +641,7 @@ border: none;
 }
 .modal-text {
   margin-bottom: 8px;
+  margin-top: 4px;
   width: 360px;
   height: 40px;
   padding-left: 38px;
@@ -675,9 +665,11 @@ fill:  #4D5AE5;
     border-color: #4D5AE5;
 }
 .input-icon {
-  position: absolute;
-  top: 14px;
-  left: 19px;
+  
+   position: absolute;
+    left: 16px;
+    top: 50%;
+    transform: translateY(-50%);
 }
 .modal-label {
   font-family: "Roboto";
@@ -688,7 +680,6 @@ fill:  #4D5AE5;
   /* identical to box height, or 117% */
   letter-spacing: 0.04em;
   color: #8e8f99;
-  padding: 4px;
 }
 .modal-comment {
   width: 360px;
@@ -721,7 +712,20 @@ line-height: 1.17;
 /* or 117% */
 letter-spacing: 0.04em;
 color: #8E8F99;
+display: flex;
+    align-items: center;
+    justify-content: center; 
+}
 
+.svg-check{
+  width: 16px;
+    height: 16px;
+    border: 1px solid #212121;
+    border-radius: 2px;
+    margin-right: 8px;
+    display: flex;
+    /* align-items: center; */
+    justify-content: center;
 }
 .uncheck{
   opacity: 1;
@@ -734,6 +738,10 @@ color: #8E8F99;
 }
 .subscribe-check:checked + .svg-check > .check {
   opacity: 1;
+}
+.privacy{
+  color: #4D5AE5;
+  text-decoration: underline;
 }
 .modal-button {
   display: flex;
